@@ -316,13 +316,13 @@
   "shortName": "cro",
   "networkId": 25,
   "nativeCurrency": {
-    "name": "Crypto.org Coin",
+    "name": "Cronos",
     "symbol": "CRO",
     "decimals": 18
   },
-  "rpc": ["https://evm-cronos.crypto.org"],
+  "rpc": ["https://evm.cronos.org"],
   "faucets": [],
-  "infoURL": "https://cronos.crypto.org"
+  "infoURL": "https://cronos.org/"
 }, {
   "name": "Genesis L1 testnet",
   "chainId": 26,
@@ -1533,6 +1533,19 @@
   "faucets": ["https://faucet-testnet.kcc.network"],
   "infoURL": "https://scan-testnet.kcc.network"
 }, {
+  "name": "Web3Q Mainnet",
+  "chainId": 333,
+  "shortName": "w3q",
+  "networkId": 333,
+  "nativeCurrency": {
+    "name": "Web3Q",
+    "symbol": "W3Q",
+    "decimals": 18
+  },
+  "rpc": ["https://mainnet.web3q.io:8545"],
+  "faucets": [],
+  "infoURL": "https://web3q.io/home.w3q/"
+}, {
   "name": "Shiden",
   "chainId": 336,
   "shortName": "sdn",
@@ -2144,6 +2157,32 @@
   "faucets": ["https://scan.boka.network/#/Galois/faucet"],
   "infoURL": "https://mathchain.org"
 }, {
+  "name": "Iora Chain",
+  "chainId": 1197,
+  "shortName": "iora",
+  "networkId": 1197,
+  "nativeCurrency": {
+    "name": "Iora",
+    "symbol": "IORA",
+    "decimals": 18
+  },
+  "rpc": ["https://dataseed.iorachain.com"],
+  "faucets": [],
+  "infoURL": "https://iorachain.com"
+}, {
+  "name": "Evanesco Testnet",
+  "chainId": 1201,
+  "shortName": "avis",
+  "networkId": 1201,
+  "nativeCurrency": {
+    "name": "AVIS",
+    "symbol": "AVIS",
+    "decimals": 18
+  },
+  "rpc": ["https://seed5.evanesco.org:8547"],
+  "faucets": [],
+  "infoURL": "https://evanesco.org/"
+}, {
   "name": "World Trade Technical Chain Mainnet",
   "chainId": 1202,
   "shortName": "wtt",
@@ -2391,6 +2430,19 @@
   "faucets": [],
   "infoURL": "https://ecoball.org"
 }, {
+  "name": "Evanesco Mainnet",
+  "chainId": 2213,
+  "shortName": "evanesco",
+  "networkId": 2213,
+  "nativeCurrency": {
+    "name": "EVA",
+    "symbol": "EVA",
+    "decimals": 18
+  },
+  "rpc": ["https://seed4.evanesco.org:8546"],
+  "faucets": [],
+  "infoURL": "https://evanesco.org/"
+}, {
   "name": "Kortho Mainnet",
   "chainId": 2559,
   "shortName": "ktoc",
@@ -2416,6 +2468,19 @@
   "rpc": ["https://rpc-testnet.zcore.cash"],
   "faucets": ["https://faucet.zcore.cash"],
   "infoURL": "https://zcore.cash"
+}, {
+  "name": "Web3Q Testnet",
+  "chainId": 3333,
+  "shortName": "w3q-t",
+  "networkId": 3333,
+  "nativeCurrency": {
+    "name": "Web3Q",
+    "symbol": "W3Q",
+    "decimals": 18
+  },
+  "rpc": ["https://testnet.web3q.io:8545"],
+  "faucets": [],
+  "infoURL": "https://web3q.io/home.w3q/"
 }, {
   "name": "Bittex Mainnet",
   "chainId": 3690,
@@ -2573,6 +2638,32 @@
   "faucets": ["https://faucet.hazlor.com"],
   "infoURL": "https://hazlor.com"
 }, {
+  "name": "Teleport",
+  "chainId": 8000,
+  "shortName": "teleport",
+  "networkId": 8000,
+  "nativeCurrency": {
+    "name": "Tele",
+    "symbol": "TELE",
+    "decimals": 18
+  },
+  "rpc": ["https://evm-rpc.teleport.network"],
+  "faucets": [],
+  "infoURL": "https://teleport.network"
+}, {
+  "name": "Teleport Testnet",
+  "chainId": 8001,
+  "shortName": "teleport-testnet",
+  "networkId": 8001,
+  "nativeCurrency": {
+    "name": "Tele",
+    "symbol": "TELE",
+    "decimals": 18
+  },
+  "rpc": ["https://evm-rpc.testnet.teleport.network"],
+  "faucets": ["https://chain-docs.teleport.network/testnet/faucet.html"],
+  "infoURL": "https://teleport.network"
+}, {
   "name": "MDGL Testnet",
   "chainId": 8029,
   "shortName": "mdgl",
@@ -2679,15 +2770,15 @@
 }, {
   "name": "Evmos Testnet",
   "chainId": 9000,
-  "shortName": "evmos-mons",
+  "shortName": "evmos-testnet",
   "networkId": 9000,
   "nativeCurrency": {
-    "name": "Photon",
-    "symbol": "PHOTON",
+    "name": "test-Evmos",
+    "symbol": "tEVMOS",
     "decimals": 18
   },
-  "rpc": ["https://ethereum.rpc.evmos.dev"],
-  "faucets": ["https://faucet.evmos.org"],
+  "rpc": ["https://evmos-archive-testnet.api.bdnodes.net:8545"],
+  "faucets": ["https://faucet.evmos.dev"],
   "infoURL": "https://evmos.org"
 }, {
   "name": "Evmos",
@@ -2699,7 +2790,7 @@
     "symbol": "EVMOS",
     "decimals": 18
   },
-  "rpc": ["https://ethereum.rpc.evmos.org"],
+  "rpc": ["https://eth.bd.evmos.org:8545"],
   "faucets": [],
   "infoURL": "https://evmos.org"
 }, {
@@ -2832,6 +2923,19 @@
   "rpc": ["https://zerorpc.singularity.gold"],
   "faucets": ["https://zeroscan.singularity.gold"],
   "infoURL": "https://www.singularity.gold"
+}, {
+  "name": "Phoenix Mainnet",
+  "chainId": 13381,
+  "shortName": "Phoenix",
+  "networkId": 13381,
+  "nativeCurrency": {
+    "name": "Phoenix",
+    "symbol": "PHX",
+    "decimals": 18
+  },
+  "rpc": ["https://rpc.phoenixplorer.com/"],
+  "faucets": [],
+  "infoURL": "https://cryptophoenix.org/phoenix"
 }, {
   "name": "MetaDot Mainnet",
   "chainId": 16000,
@@ -2969,7 +3073,7 @@
   "networkId": 42161,
   "nativeCurrency": {
     "name": "Ether",
-    "symbol": "AETH",
+    "symbol": "ETH",
     "decimals": 18
   },
   "rpc": ["https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}", "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}", "https://arb1.arbitrum.io/rpc", "wss://arb1.arbitrum.io/ws"],
@@ -3041,7 +3145,7 @@
   "faucets": ["https://faucet.avax-test.network/"],
   "infoURL": "https://cchain.explorer.avax-test.network"
 }, {
-  "name": "Avalanche Mainnet",
+  "name": "Avalanche C-Chain",
   "chainId": 43114,
   "shortName": "Avalanche",
   "networkId": 43114,
@@ -3754,7 +3858,7 @@
   },
   "rpc": ["https://infragrid.v.network/ethereum/compatible"],
   "faucets": [],
-  "infoURL": "https://visionscan.org"
+  "infoURL": "https://www.v.network"
 }, {
   "name": "Eluvio Content Fabric",
   "chainId": 955305,
@@ -3778,7 +3882,7 @@
     "symbol": "ETHO",
     "decimals": 18
   },
-  "rpc": ["https://rpc.ether1.org"],
+  "rpc": ["https://rpc.ethoprotocol.com"],
   "faucets": [],
   "infoURL": "https://ethoprotocol.com"
 }, {
@@ -3820,6 +3924,19 @@
   "rpc": ["https://mewapi.musicoin.tw"],
   "faucets": [],
   "infoURL": "https://musicoin.tw"
+}, {
+  "name": "Sepolia",
+  "chainId": 11155111,
+  "shortName": "sep",
+  "networkId": 11155111,
+  "nativeCurrency": {
+    "name": "Sepolia Ether",
+    "symbol": "SEP",
+    "decimals": 18
+  },
+  "rpc": [],
+  "faucets": [],
+  "infoURL": "https://sepolia.otterscan.io"
 }, {
   "name": "PepChain Churchill",
   "chainId": 13371337,
