@@ -80,7 +80,7 @@ private fun createOutputFiles() {
     )
 
     File(buildPath, ".nojekyll").createNewFile()
-    File(buildPath, "CNAME").writeText("chainid.network")
+//    File(buildPath, "CNAME").writeText("chainid.network")
 }
 
 private fun doChecks(doRPCConnect: Boolean) {
