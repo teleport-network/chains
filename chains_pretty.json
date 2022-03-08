@@ -3588,7 +3588,7 @@
   "explorers": [{
     "name": "Teleport EVM Explorer (Blockscout)",
     "url": "https://evm-explorer.teleport.network",
-    "standard": "none",
+    "standard": "EIP3091",
     "icon": "teleport"
   }, {
     "name": "Teleport Cosmos Explorer (Big Dipper)",
@@ -3614,7 +3614,7 @@
   "explorers": [{
     "name": "Teleport EVM Explorer (Blockscout)",
     "url": "https://evm-explorer.testnet.teleport.network",
-    "standard": "none",
+    "standard": "EIP3091",
     "icon": "teleport"
   }, {
     "name": "Teleport Cosmos Explorer (Big Dipper)",
