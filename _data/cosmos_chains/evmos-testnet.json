@@ -1,0 +1,42 @@
+{
+  "chainId": "evmos_9000-3",
+  "chainName": "Evmos Testnet",
+  "rpc": "http://34.133.158.107:26657",
+  "rest": "http://34.133.158.107:1317",
+  "stakeCurrency": {
+    "coinDenom": "TEVMOS",
+    "coinMinimalDenom": "atevmos",
+    "coinDecimals": "18"
+  },
+  "bip44": {
+    "coinType": "118"
+  },
+  "bech32Config": {
+    "bech32PrefixAccAddr": "evmos",
+    "bech32PrefixAccPub": "evmospub",
+    "bech32PrefixValAddr": "evmosvaloper",
+    "bech32PrefixValPub": "evmosvaloperpub",
+    "bech32PrefixConsAddr": "evmosvalcons",
+    "bech32PrefixConsPub": "evmosvalconspub"
+  },
+  "currencies": [
+    {
+      "coinDenom": "TEVMOS",
+      "coinMinimalDenom": "atevmos",
+      "coinDecimals": "18"
+    }
+  ],
+  "feeCurrencies": [
+    {
+      "coinDenom": "TEVMOS",
+      "coinMinimalDenom": "atevmos",
+      "coinDecimals": "18"
+    }
+  ],
+  "coinType": "118",
+  "gasPriceStep": {
+    "low": "0.005",
+    "average": "0.025",
+    "high": "0.04"
+  }
+}
