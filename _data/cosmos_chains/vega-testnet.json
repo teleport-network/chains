@@ -1,0 +1,50 @@
+{
+  "chainId": "vega-testnet",
+  "chainName": "vega-testnet",
+  "rpc": "https://vega-rpc.interchain.io",
+  "rest": "https://vega-rest.interchain.io",
+  "bip44": {
+    "coinType": 118
+  },
+  "bech32Config": {
+    "bech32PrefixAccAddr": "cosmos",
+    "bech32PrefixAccPub": "cosmospub",
+    "bech32PrefixValAddr": "cosmosvaloper",
+    "bech32PrefixValPub": "cosmosvaloperpub",
+    "bech32PrefixConsAddr": "cosmosvalcons",
+    "bech32PrefixConsPub": "cosmosvalconspub"
+  },
+  "currencies": [
+    {
+      "coinDenom": "ATOM",
+      "coinMinimalDenom": "uatom",
+      "coinDecimals": 6,
+      "coinGeckoId": "cosmos"
+    }
+  ],
+  "feeCurrencies": [
+    {
+      "coinDenom": "ATOM",
+      "coinMinimalDenom": "uatom",
+      "coinDecimals": 6,
+      "coinGeckoId": "cosmos"
+    }
+  ],
+  "stakeCurrency": {
+    "coinDenom": "ATOM",
+    "coinMinimalDenom": "uatom",
+    "coinDecimals": 6,
+    "coinGeckoId": "cosmos"
+  },
+  "coinType": 118,
+  "gasPriceStep": {
+    "low": 1,
+    "average": 1,
+    "high": 1
+  },
+  "features": [
+    "stargate",
+    "ibc-transfer",
+    "no-legacy-stdTx"
+  ]
+}
