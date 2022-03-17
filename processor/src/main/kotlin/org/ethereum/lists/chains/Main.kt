@@ -16,25 +16,53 @@ val basePath = File("..")
 val dataPath = File(basePath, "_data")
 val iconsPath = File(dataPath, "icons")
 
-val chainsPath = File(dataPath, "chains")
-private val allFiles = chainsPath.listFiles() ?: error("$chainsPath must contain the chain json files - but it does not")
-private val allChainFiles = allFiles.filter { !it.isDirectory }
+val evmChainsPath = File(dataPath, "chains")
+private val filesInEVMChainsFolder = evmChainsPath.listFiles() ?: error("$evmChainsPath must contain the chain json files - but it does not")
+private val allEvmChainFiles = filesInEVMChainsFolder.filter { !it.isDirectory }
+
+val cosmosChainsPath = File(dataPath, "cosmos_chains")
+private val filesInCosmosChainsFolder = cosmosChainsPath.listFiles() ?: error("$evmChainsPath must contain the chain json files - but it does not")
+private val allCosmosChainFiles = filesInCosmosChainsFolder.filter { !it.isDirectory }
 
 fun main(args: Array<String>) {
+    val buildPath = File(basePath, "output").apply { mkdir() }
 
     doChecks(doRPCConnect = args.contains("rpcConnect"))
 
-    createOutputFiles()
+    createOutputFilesForEVM()
+    createOutputFilesForCosmos()
+
+    File(buildPath, "index.html").writeText(
+            """
+            <!DOCTYPE HTML>
+            <html lang="en-US">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="refresh" content="0; url=https://chainlist.org">
+                    <script type="text/javascript">
+                        window.location.href = "https://chainlist.org"
+                    </script>
+                    <title>Page Redirection</title>
+                </head>
+                <body>
+                    If you are not redirected automatically, follow this <a href='https://chainlist.org'>link to chainlist.org</a>.
+                </body>
+            </html>
+    """.trimIndent()
+    )
+
+    File(buildPath, ".nojekyll").createNewFile()
+//    File(buildPath, "CNAME").writeText("chainid.network")
 }
 
-private fun createOutputFiles() {
+private fun createOutputFilesForEVM() {
     val buildPath = File(basePath, "output").apply { mkdir() }
 
     val chainJSONArray = JsonArray<JsonObject>()
     val miniChainJSONArray = JsonArray<JsonObject>()
     val shortNameMapping = JsonObject()
 
-    allChainFiles
+    allEvmChainFiles
         .map { Klaxon().parseJsonObject(it.reader()) }
         .sortedBy { (it["chainId"] as Number).toLong() }
         .forEach { jsonObject ->
@@ -60,31 +88,32 @@ private fun createOutputFiles() {
     File(buildPath, "chains_mini_pretty.json").writeText(miniChainJSONArray.toJsonString(prettyPrint = true))
 
     File(buildPath, "shortNameMapping.json").writeText(shortNameMapping.toJsonString(prettyPrint = true))
-    File(buildPath, "index.html").writeText(
-        """
-            <!DOCTYPE HTML>
-            <html lang="en-US">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta http-equiv="refresh" content="0; url=https://chainlist.org">
-                    <script type="text/javascript">
-                        window.location.href = "https://chainlist.org"
-                    </script>
-                    <title>Page Redirection</title>
-                </head>
-                <body>
-                    If you are not redirected automatically, follow this <a href='https://chainlist.org'>link to chainlist.org</a>.
-                </body>
-            </html>
-    """.trimIndent()
-    )
+}
 
-    File(buildPath, ".nojekyll").createNewFile()
-//    File(buildPath, "CNAME").writeText("chainid.network")
+private fun createOutputFilesForCosmos() {
+    val buildPath = File(basePath, "output").apply { mkdir() }
+
+    val chainJSONArray = JsonArray<JsonObject>()
+//    val shortNameMapping = JsonObject()
+
+    allCosmosChainFiles
+            .map { Klaxon().parseJsonObject(it.reader()) }
+            // disable sort because cosmos chainId is not number
+//            .sortedBy { (it["chainId"] as Number).toLong() }
+            .forEach { jsonObject ->
+                chainJSONArray.add(jsonObject)
+                // disabled, I do not know if cosmos will need this
+//                shortNameMapping[jsonObject["shortName"] as String] = "eip155:" + jsonObject["chainId"]
+
+            }
+
+    File(buildPath, "cosmos_chains.json").writeText(chainJSONArray.toJsonString())
+    File(buildPath, "cosmos_chains_pretty.json").writeText(chainJSONArray.toJsonString(prettyPrint = true))
+//    File(buildPath, "shortNameMapping.json").writeText(shortNameMapping.toJsonString(prettyPrint = true))
 }
 
 private fun doChecks(doRPCConnect: Boolean) {
-    allChainFiles.forEach {
+    allEvmChainFiles.forEach {
         checkChain(it, doRPCConnect)
     }
 
@@ -93,7 +122,7 @@ private fun doChecks(doRPCConnect: Boolean) {
         checkIcon(it)
     }
 
-    allFiles.filter { it.isDirectory }.forEach {
+    filesInEVMChainsFolder.filter { it.isDirectory }.forEach {
         if (it.name != "deprecated") {
             error("the only directory allowed is 'deprecated'")
         }
