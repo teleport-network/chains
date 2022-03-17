@@ -515,7 +515,7 @@
     "symbol": "PRING",
     "decimals": 18
   },
-  "rpc": ["http://pangolin-rpc.darwinia.network"],
+  "rpc": ["https://pangolin-rpc.darwinia.network"],
   "faucets": ["https://docs.crab.network/dvm/wallets/dvm-metamask#apply-for-the-test-token"],
   "infoURL": "https://darwinia.network/"
 }, {
@@ -528,7 +528,7 @@
     "symbol": "CRAB",
     "decimals": 18
   },
-  "rpc": ["http://crab-rpc.darwinia.network"],
+  "rpc": ["https://crab-rpc.darwinia.network"],
   "faucets": [],
   "infoURL": "https://crab.network/"
 }, {
@@ -1468,6 +1468,19 @@
   "faucets": ["https://scan-testnet.hecochain.com/faucet"],
   "infoURL": "https://testnet.hecoinfo.com"
 }, {
+  "name": "Setheum",
+  "chainId": 258,
+  "shortName": "setm",
+  "networkId": 258,
+  "nativeCurrency": {
+    "name": "Setheum",
+    "symbol": "SETM",
+    "decimals": 18
+  },
+  "rpc": [],
+  "faucets": [],
+  "infoURL": "https://setheum.xyz"
+}, {
   "name": "SUR Blockchain Network",
   "chainId": 262,
   "shortName": "SUR",
@@ -1633,7 +1646,7 @@
     "symbol": "PLS",
     "decimals": 18
   },
-  "rpc": ["https://rpc.mainnet.pulsechain.com/v1/${PULSECHAIN_API_KEY}", "wss://rpc.mainnet.pulsechain.com/ws/v1/${PULSECHAIN_API_KEY}"],
+  "rpc": ["https://rpc.mainnet.pulsechain.com/", "wss://rpc.mainnet.pulsechain.com/"],
   "faucets": [],
   "infoURL": "https://pulsechain.com/"
 }, {
@@ -1675,6 +1688,32 @@
   "rpc": [],
   "faucets": [],
   "infoURL": "https://www.rupx.io"
+}, {
+  "name": "Double-A Chain Mainnet",
+  "chainId": 512,
+  "shortName": "aac",
+  "networkId": 512,
+  "nativeCurrency": {
+    "name": "Acuteangle Native Token",
+    "symbol": "AAC",
+    "decimals": 18
+  },
+  "rpc": ["https://rpc.acuteangle.com"],
+  "faucets": [],
+  "infoURL": "https://www.acuteangle.com/"
+}, {
+  "name": "Double-A Chain Testnet",
+  "chainId": 513,
+  "shortName": "aact",
+  "networkId": 513,
+  "nativeCurrency": {
+    "name": "Acuteangle Native Token",
+    "symbol": "AAC",
+    "decimals": 18
+  },
+  "rpc": ["https://rpc-testnet.acuteangle.com"],
+  "faucets": ["https://scan-testnet.acuteangle.com/faucet"],
+  "infoURL": "https://www.acuteangle.com/"
 }, {
   "name": "Vela1 Chain Mainnet",
   "chainId": 555,
@@ -1958,8 +1997,34 @@
     "symbol": "tPLS",
     "decimals": 18
   },
-  "rpc": ["https://rpc.testnet.pulsechain.com/v1/${PULSECHAIN_API_KEY}", "wss://rpc.testnet.pulsechain.com/ws/v1/${PULSECHAIN_API_KEY}"],
-  "faucets": [],
+  "rpc": ["https://rpc.v2.testnet.pulsechain.com/", "wss://rpc.v2.testnet.pulsechain.com/"],
+  "faucets": ["https://faucet.v2.testnet.pulsechain.com/"],
+  "infoURL": "https://pulsechain.com/"
+}, {
+  "name": "PulseChain Testnet v2b",
+  "chainId": 941,
+  "shortName": "t2bpls",
+  "networkId": 941,
+  "nativeCurrency": {
+    "name": "Test Pulse",
+    "symbol": "tPLS",
+    "decimals": 18
+  },
+  "rpc": ["https://rpc.v2b.testnet.pulsechain.com/", "wss://rpc.v2b.testnet.pulsechain.com/"],
+  "faucets": ["https://faucet.v2b.testnet.pulsechain.com/"],
+  "infoURL": "https://pulsechain.com/"
+}, {
+  "name": "PulseChain Testnet v3",
+  "chainId": 942,
+  "shortName": "t3pls",
+  "networkId": 942,
+  "nativeCurrency": {
+    "name": "Test Pulse",
+    "symbol": "tPLS",
+    "decimals": 18
+  },
+  "rpc": ["https://rpc.v3.testnet.pulsechain.com/", "wss://rpc.v3.testnet.pulsechain.com/"],
+  "faucets": ["https://faucet.v3.testnet.pulsechain.com/"],
   "infoURL": "https://pulsechain.com/"
 }, {
   "name": "Nepal Blockchain Network",
@@ -2482,6 +2547,32 @@
   "faucets": [],
   "infoURL": "https://web3q.io/home.w3q/"
 }, {
+  "name": "Paribu Net Mainnet",
+  "chainId": 3400,
+  "shortName": "prb",
+  "networkId": 3400,
+  "nativeCurrency": {
+    "name": "PRB",
+    "symbol": "PRB",
+    "decimals": 18
+  },
+  "rpc": ["https://rpc.paribu.network"],
+  "faucets": [],
+  "infoURL": "https://net.paribu.com"
+}, {
+  "name": "Paribu Net Testnet",
+  "chainId": 3500,
+  "shortName": "prbtestnet",
+  "networkId": 3500,
+  "nativeCurrency": {
+    "name": "PRB",
+    "symbol": "PRB",
+    "decimals": 18
+  },
+  "rpc": ["https://rpc.testnet.paribuscan.com"],
+  "faucets": ["https://faucet.paribuscan.com"],
+  "infoURL": "https://net.paribu.com"
+}, {
   "name": "Bittex Mainnet",
   "chainId": 3690,
   "shortName": "btx",
@@ -2494,6 +2585,32 @@
   "rpc": ["https://rpc1.bittexscan.info", "https://rpc2.bittexscan.info"],
   "faucets": [],
   "infoURL": "https://bittexscan.com"
+}, {
+  "name": "DYNO Mainnet",
+  "chainId": 3966,
+  "shortName": "dyno",
+  "networkId": 3966,
+  "nativeCurrency": {
+    "name": "DYNO Token",
+    "symbol": "DYNO",
+    "decimals": 18
+  },
+  "rpc": ["https://api.dynoprotocol.com"],
+  "faucets": ["https://faucet.dynoscan.io"],
+  "infoURL": "https://dynoprotocol.com"
+}, {
+  "name": "DYNO Testnet",
+  "chainId": 3967,
+  "shortName": "tdyno",
+  "networkId": 3967,
+  "nativeCurrency": {
+    "name": "DYNO Token",
+    "symbol": "tDYNO",
+    "decimals": 18
+  },
+  "rpc": ["https://tapi.dynoprotocol.com"],
+  "faucets": ["https://faucet.dynoscan.io"],
+  "infoURL": "https://dynoprotocol.com"
 }, {
   "name": "Fantom Testnet",
   "chainId": 4002,
@@ -2975,6 +3092,19 @@
   "rpc": ["https://seed.btcix.org/rpc"],
   "faucets": [],
   "infoURL": "https://bitcolojix.org"
+}, {
+  "name": "omChain Mainnet",
+  "chainId": 21816,
+  "shortName": "oml",
+  "networkId": 21816,
+  "nativeCurrency": {
+    "name": "Omlira",
+    "symbol": "OML",
+    "decimals": 18
+  },
+  "rpc": ["https://seed.omlira.com"],
+  "faucets": [],
+  "infoURL": "https://omlira.com"
 }, {
   "name": "Webchain",
   "chainId": 24484,
@@ -3756,6 +3886,19 @@
   "faucets": [],
   "infoURL": "https://www.platon.network"
 }, {
+  "name": "Haymo Testnet",
+  "chainId": 234666,
+  "shortName": "hym",
+  "networkId": 234666,
+  "nativeCurrency": {
+    "name": "HAYMO",
+    "symbol": "HYM",
+    "decimals": 18
+  },
+  "rpc": ["https://testnet1.haymo.network"],
+  "faucets": [],
+  "infoURL": "https://haymoswap.web.app/"
+}, {
   "name": "ARTIS sigma1",
   "chainId": 246529,
   "shortName": "ats",
@@ -3833,6 +3976,19 @@
   "rpc": ["https://rinkeby.arbitrum.io/rpc", "wss://rinkeby.arbitrum.io/ws"],
   "faucets": ["http://fauceth.komputing.org?chain=421611&address=${ADDRESS}"],
   "infoURL": "https://arbitrum.io"
+}, {
+  "name": "Weelink Testnet",
+  "chainId": 444900,
+  "shortName": "wlkt",
+  "networkId": 444900,
+  "nativeCurrency": {
+    "name": "Weelink Chain Token",
+    "symbol": "tWLK",
+    "decimals": 18
+  },
+  "rpc": ["https://weelinknode1c.gw002.oneitfarm.com"],
+  "faucets": ["https://faucet.weelink.gw002.oneitfarm.com"],
+  "infoURL": "https://weelink.cloud"
 }, {
   "name": "Vision - Vpioneer Test Chain",
   "chainId": 666666,
@@ -4133,39 +4289,39 @@
   "faucets": [],
   "infoURL": "https://iposlab.com"
 }, {
-  "name": "Aurora MainNet",
+  "name": "Aurora Mainnet",
   "chainId": 1313161554,
   "shortName": "aurora",
   "networkId": 1313161554,
   "nativeCurrency": {
     "name": "Ether",
-    "symbol": "aETH",
+    "symbol": "ETH",
     "decimals": 18
   },
   "rpc": ["https://mainnet.aurora.dev"],
   "faucets": [],
   "infoURL": "https://aurora.dev"
 }, {
-  "name": "Aurora TestNet",
+  "name": "Aurora Testnet",
   "chainId": 1313161555,
   "shortName": "aurora-testnet",
   "networkId": 1313161555,
   "nativeCurrency": {
     "name": "Ether",
-    "symbol": "aETH",
+    "symbol": "ETH",
     "decimals": 18
   },
   "rpc": ["https://testnet.aurora.dev/"],
   "faucets": [],
   "infoURL": "https://aurora.dev"
 }, {
-  "name": "Aurora BetaNet",
+  "name": "Aurora Betanet",
   "chainId": 1313161556,
   "shortName": "aurora-betanet",
   "networkId": 1313161556,
   "nativeCurrency": {
     "name": "Ether",
-    "symbol": "aETH",
+    "symbol": "ETH",
     "decimals": 18
   },
   "rpc": ["https://betanet.aurora.dev/"],
